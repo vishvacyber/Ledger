@@ -36,7 +36,7 @@ app.use('/auth', authRouter);
 
 // Login page
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/login.html'));
+  res.sendFile(path.join(__dirname, 'login.html'));
 });
 
 // ── Protected API routes ──────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ app.use((err, req, res, next) => {
 // ── SPA fallback (protected) ──────────────────────────────────────────────────
 app.get('/{*path}', (req, res) => {
   // Let unauthenticated users see /login; redirect everything else to app
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // ── Startup ───────────────────────────────────────────────────────────────────
