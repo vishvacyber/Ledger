@@ -1,5 +1,6 @@
 node_modules/
 .env
-data/
 *.db
-*.log
+*.db-journal
+.package-lock.json
+.bin/
